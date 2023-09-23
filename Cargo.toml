@@ -1,0 +1,15 @@
+[package]
+name = "skiller"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4.4", features = ["derive"] }
+rusb = "0.9.3"
+libskiller = { git = "https://github.com/PotatoMaaan/libskiller", features = [
+    "clap",
+] }
+
+[profile.release]
+strip = true
+lto = true

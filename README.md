@@ -1,6 +1,8 @@
 # skiller-cli
 
-A cli to control the Skiller Pro+ keyboard on linux
+A cli to control the Skiller Pro+ keyboard on linux based on [libskiller](https://github.com/PotatoMaaan/libskiller)
+
+> NOTE: This is unofficial software, use it at your own risk!
 
 ## Getting started
 

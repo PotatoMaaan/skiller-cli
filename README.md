@@ -8,7 +8,7 @@ A cli to control the Skiller Pro+ keyboard on linux based on [libskiller](https:
 
 ### Installation
 
-You can grab a binary from the releases page, or you can [build one yourself](##Building)
+You can grab a binary from the releases page, or you can [build one yourself](#Building)
 
 ### Usage
 

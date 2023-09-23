@@ -173,7 +173,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "skiller"
+name = "skiller-cli"
 version = "0.1.0"
 dependencies = [
  "clap",

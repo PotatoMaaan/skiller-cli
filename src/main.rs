@@ -48,7 +48,7 @@ fn main() {
             skiller.set_brightness(brightness, p)
         }
         cli::Subcommands::WinKey { enable } => {
-            println!("Setting windows key to {}.", enable.to_string());
+            println!("Setting windows key to {:?}.", enable);
 
             skiller.set_win_key(enable.to_bool(), p)
         }

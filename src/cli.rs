@@ -51,12 +51,3 @@ impl WinKeyState {
         }
     }
 }
-
-impl ToString for WinKeyState {
-    fn to_string(&self) -> String {
-        match self {
-            WinKeyState::On => "On".to_string(),
-            WinKeyState::Off => "Off".to_string(),
-        }
-    }
-}

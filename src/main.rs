@@ -9,11 +9,15 @@ mod cli;
 fn main() {
     let args = Cli::parse();
 
-    if (args.profile == 0) || (args.profile > 3) {
-        eprintln!("Profile can only be 1, 2 or 3");
-        exit(1);
-    }
-    let p = num_to_profile_unchecked(args.profile);
+    let p = match args.profile {
+        1 => libskiller::Profile::P1,
+        2 => libskiller::Profile::P2,
+        3 => libskiller::Profile::P3,
+        _ => {
+            eprintln!("Profile can only be 1, 2 or 3");
+            exit(1);
+        }
+    };
 
     let skiller = match SkillerProPlus::new(Duration::from_secs(1)) {
         Err(e) => {
@@ -92,15 +96,6 @@ fn print_rusb_error(err: &rusb::Error) {
         _ => {
             eprintln!("Libusb returned an error: {:?}.", err);
         }
-    }
-}
-
-fn num_to_profile_unchecked(num: u8) -> libskiller::Profile {
-    match num {
-        1 => libskiller::Profile::P1,
-        2 => libskiller::Profile::P2,
-        3 => libskiller::Profile::P3,
-        _ => unreachable!(),
     }
 }
 

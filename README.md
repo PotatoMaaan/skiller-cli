@@ -48,10 +48,11 @@ Arguments:
 
 ## Building
 
-In order to build this program, you need to have a rust toolchain installed. You get it [here](https://rustup.rs/)
+In order to build this program, you need to have a rust toolchain installed. You can get it [here](https://rustup.rs/)
 
 To build a ready-to-use binary just run:
 
 ```sh
 cargo build --release
 ```
+The binary will be at `target/releasee/skiller-cli`
